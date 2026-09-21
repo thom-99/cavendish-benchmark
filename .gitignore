@@ -1,0 +1,16 @@
+tests/
+*__pycache__
+.pytest_cache
+
+notes_on_inSVert.md
+truvari.md
+dysgu-issue.txt
+installation.txt
+procedure.md
+
+.pixi/
+.agents/
+.codex/
+
+
+data/

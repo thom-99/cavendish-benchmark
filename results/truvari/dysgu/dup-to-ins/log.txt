@@ -1,0 +1,87 @@
+2026-09-21 12:36:52,184 [INFO] Truvari v5.4.0
+2026-09-21 12:36:52,184 [INFO] Command /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/bin/truvari bench --base data/evaluation/truth.vcf.gz --comp data/evaluation/dysgu.vcf.gz --output results/truvari/dysgu/dup-to-ins --pick single --passonly --sizemin 50 --sizefilt 50 --sizemax -1 --refdist 500 --pctsize 0.7 --pctseq 0 --pctovl 0 --no-decompose --dup-to-ins
+2026-09-21 12:36:52,184 [INFO] Params:
+{
+    "base": "/home/thomas/Desktop/benchmark-detection-cavendish/data/evaluation/truth.vcf.gz",
+    "comp": "/home/thomas/Desktop/benchmark-detection-cavendish/data/evaluation/dysgu.vcf.gz",
+    "output": "results/truvari/dysgu/dup-to-ins",
+    "includebed": null,
+    "extend": 0,
+    "debug": false,
+    "reference": null,
+    "refdist": 500,
+    "pctseq": 0.0,
+    "pctsize": 0.7,
+    "pctovl": 0.0,
+    "typeignore": false,
+    "no_roll": false,
+    "chunksize": 1000,
+    "bSample": "SAMPLE",
+    "cSample": "simulated",
+    "dup_to_ins": true,
+    "bnddist": 100,
+    "sizemin": 50,
+    "sizefilt": 50,
+    "sizemax": -1,
+    "passonly": true,
+    "no_ref": false,
+    "pick": "single",
+    "ignore_monref": true,
+    "check_multi": true,
+    "check_monref": true,
+    "no_single_bnd": true,
+    "write_resolved": false,
+    "decompose": false,
+    "short_circuit": false,
+    "skip_gt": false,
+    "max_resolve": 25000
+}
+2026-09-21 12:36:52,953 [INFO] Zipped 8460 variants Counter({'comp': 4460, 'base': 4000})
+2026-09-21 12:36:52,953 [INFO] 3963 chunks of 8460 variants Counter({'base': 4000, 'comp': 3818, '__filtered': 642})
+2026-09-21 12:36:53,277 [INFO] Stats: {
+    "TP-base": 3447,
+    "TP-comp": 3447,
+    "FP": 371,
+    "FN": 553,
+    "precision": 0.9028287061288632,
+    "recall": 0.86175,
+    "f1": 0.8818112049117421,
+    "base cnt": 4000,
+    "comp cnt": 3818,
+    "TP-comp_TP-gt": 1247,
+    "TP-comp_FP-gt": 2200,
+    "TP-base_TP-gt": 1247,
+    "TP-base_FP-gt": 2200,
+    "gt_concordance": 0.36176385262547145,
+    "gt_matrix": {
+        "(1, 0, 0)": {
+            "(0, 1)": 333,
+            "(1, 1)": 1
+        },
+        "(0, 1, 1)": {
+            "(0, 1)": 289,
+            "(1, 1)": 102
+        },
+        "(1, 1, 0)": {
+            "(0, 1)": 324,
+            "(1, 1)": 91
+        },
+        "(1, 1, 1)": {
+            "(1, 1)": 1009,
+            "(0, 1)": 265
+        },
+        "(1, 0, 1)": {
+            "(0, 1)": 307,
+            "(1, 1)": 90
+        },
+        "(0, 1, 0)": {
+            "(0, 1)": 309,
+            "(1, 1)": 2
+        },
+        "(0, 0, 1)": {
+            "(0, 1)": 322,
+            "(1, 1)": 3
+        }
+    }
+}
+2026-09-21 12:36:53,277 [INFO] Finished bench

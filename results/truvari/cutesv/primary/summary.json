@@ -1,0 +1,39 @@
+{
+    "TP-base": 2429,
+    "TP-comp": 2429,
+    "FP": 731,
+    "FN": 1571,
+    "precision": 0.7686708860759494,
+    "recall": 0.60725,
+    "f1": 0.6784916201117318,
+    "base cnt": 4000,
+    "comp cnt": 3160,
+    "TP-comp_TP-gt": 0,
+    "TP-comp_FP-gt": 2429,
+    "TP-base_TP-gt": 0,
+    "TP-base_FP-gt": 2429,
+    "gt_concordance": 0.0,
+    "gt_matrix": {
+        "(1, 0, 0)": {
+            "(None, None)": 121
+        },
+        "(0, 1, 1)": {
+            "(None, None)": 328
+        },
+        "(1, 1, 0)": {
+            "(None, None)": 334
+        },
+        "(1, 1, 1)": {
+            "(None, None)": 1099
+        },
+        "(1, 0, 1)": {
+            "(None, None)": 312
+        },
+        "(0, 0, 1)": {
+            "(None, None)": 125
+        },
+        "(0, 1, 0)": {
+            "(None, None)": 110
+        }
+    }
+}

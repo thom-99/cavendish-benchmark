@@ -1,0 +1,80 @@
+2026-09-21 12:36:48,280 [INFO] Truvari v5.4.0
+2026-09-21 12:36:48,280 [INFO] Command /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/bin/truvari bench --base data/evaluation/truth.vcf.gz --comp data/evaluation/cutesv.vcf.gz --output results/truvari/cutesv/primary --pick single --passonly --sizemin 50 --sizefilt 50 --sizemax -1 --refdist 500 --pctsize 0.7 --pctseq 0 --pctovl 0 --no-decompose
+2026-09-21 12:36:48,280 [INFO] Params:
+{
+    "base": "/home/thomas/Desktop/benchmark-detection-cavendish/data/evaluation/truth.vcf.gz",
+    "comp": "/home/thomas/Desktop/benchmark-detection-cavendish/data/evaluation/cutesv.vcf.gz",
+    "output": "results/truvari/cutesv/primary",
+    "includebed": null,
+    "extend": 0,
+    "debug": false,
+    "reference": null,
+    "refdist": 500,
+    "pctseq": 0.0,
+    "pctsize": 0.7,
+    "pctovl": 0.0,
+    "typeignore": false,
+    "no_roll": false,
+    "chunksize": 1000,
+    "bSample": "SAMPLE",
+    "cSample": "NULL",
+    "dup_to_ins": false,
+    "bnddist": 100,
+    "sizemin": 50,
+    "sizefilt": 50,
+    "sizemax": -1,
+    "passonly": true,
+    "no_ref": false,
+    "pick": "single",
+    "ignore_monref": true,
+    "check_multi": true,
+    "check_monref": true,
+    "no_single_bnd": true,
+    "write_resolved": false,
+    "decompose": false,
+    "short_circuit": false,
+    "skip_gt": false,
+    "max_resolve": 25000
+}
+2026-09-21 12:36:48,860 [INFO] Zipped 7165 variants Counter({'base': 4000, 'comp': 3165})
+2026-09-21 12:36:48,860 [INFO] 3956 chunks of 7165 variants Counter({'base': 4000, 'comp': 3160, '__filtered': 5})
+2026-09-21 12:36:49,011 [INFO] Stats: {
+    "TP-base": 2429,
+    "TP-comp": 2429,
+    "FP": 731,
+    "FN": 1571,
+    "precision": 0.7686708860759494,
+    "recall": 0.60725,
+    "f1": 0.6784916201117318,
+    "base cnt": 4000,
+    "comp cnt": 3160,
+    "TP-comp_TP-gt": 0,
+    "TP-comp_FP-gt": 2429,
+    "TP-base_TP-gt": 0,
+    "TP-base_FP-gt": 2429,
+    "gt_concordance": 0.0,
+    "gt_matrix": {
+        "(1, 0, 0)": {
+            "(None, None)": 121
+        },
+        "(0, 1, 1)": {
+            "(None, None)": 328
+        },
+        "(1, 1, 0)": {
+            "(None, None)": 334
+        },
+        "(1, 1, 1)": {
+            "(None, None)": 1099
+        },
+        "(1, 0, 1)": {
+            "(None, None)": 312
+        },
+        "(0, 0, 1)": {
+            "(None, None)": 125
+        },
+        "(0, 1, 0)": {
+            "(None, None)": 110
+        }
+    }
+}
+2026-09-21 12:36:49,011 [INFO] Finished bench

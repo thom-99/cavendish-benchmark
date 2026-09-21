@@ -1,0 +1,29 @@
+[workspace]
+name = "benchmark-cavendish"
+version = "0.1.0"
+description = "Triploid Cavendish structural-variant benchmarking workflow"
+channels = ["conda-forge", "bioconda"]
+platforms = ["linux-64"]
+
+# Let Pixi's PyPI resolver recognize the bioconda pysam build as satisfying
+# inSVert's `pysam>=0.22` requirement instead of installing a duplicate wheel.
+[workspace.conda-pypi-map]
+bioconda = { mapping = { pysam = "pysam" } }
+
+[dependencies]
+python = "3.11.*"
+minimap2 = "*"
+badread = "*"
+sniffles = "*"
+cutesv = "*"
+dysgu = "*"
+truvari = "*"
+samtools = "*"
+bcftools = "*"
+coreutils = "*"
+gawk = "*"
+gzip = "*"
+pbsim3 = ">=3.0.5,<4"
+
+[pypi-dependencies]
+insvert = { git = "https://github.com/thom-99/inSVert.git" }
