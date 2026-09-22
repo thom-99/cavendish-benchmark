@@ -24,6 +24,9 @@ coreutils = "*"
 gawk = "*"
 gzip = "*"
 pbsim3 = ">=3.0.5,<4"
+r-base = "*"
+r-ggplot2 = "*"
+r-patchwork = "*"
 
 [pypi-dependencies]
 insvert = { git = "https://github.com/thom-99/inSVert.git" }
