@@ -1,3 +1,0 @@
-option('htslib_prefix', type : 'string', value : '',
-       description : 'Prefix of an already‑built htslib; empty means “let Meson build it”'
-       )

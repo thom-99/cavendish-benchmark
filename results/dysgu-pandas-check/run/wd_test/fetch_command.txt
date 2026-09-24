@@ -1,2 +1,0 @@
-# dysgu v1.9.0
-/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/bin/dysgu run -x --drop-gaps False --mode pacbio-sequel2 -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
