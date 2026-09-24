@@ -1,0 +1,288 @@
+2026-09-24 00:16:51,611 [INFO   ]  [dysgu-test] Version: 1.9.0
+2026-09-24 00:16:51,611 [INFO   ]  Current directory: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run
+2026-09-24 00:16:52,474 [INFO   ]  [dysgu-fetch] Version: 1.9.0
+2026-09-24 00:16:52,834 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam, n=77, time=0:00:00 h:m:s
+PASS: dysgu fetch -x  /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+2026-09-24 00:16:53,955 [INFO   ]  [dysgu-run] Version: 1.9.0
+2026-09-24 00:16:53,955 [INFO   ]  run -x --drop-gaps False -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:16:53,955 [INFO   ]  Destination: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test
+2026-09-24 00:16:54,332 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam, n=77, time=0:00:00 h:m:s
+2026-09-24 00:16:54,332 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam
+2026-09-24 00:16:54,336 [INFO   ]  Sample name: DB143
+2026-09-24 00:16:54,336 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.dysgu1.9.0.vcf
+2026-09-24 00:16:54,336 [INFO   ]  Running pipeline
+2026-09-24 00:16:54,341 [INFO   ]  Calculating insert size. Removed 3 outliers with insert size >= 486.0
+2026-09-24 00:16:54,341 [INFO   ]  Inferred read length: 100.0, insert median: 229, insert stdev: 47
+2026-09-24 00:16:54,341 [INFO   ]  Max clustering dist: 464
+2026-09-24 00:16:54,341 [INFO   ]  Building cluster graph
+2026-09-24 00:16:54,342 [INFO   ]  Total input reads: 77
+2026-09-24 00:16:54,342 [INFO   ]  Graph constructed
+2026-09-24 00:16:54,342 [INFO   ]  Minimum support: 3
+2026-09-24 00:16:54,374 [INFO   ]  Number of components: 59. N candidates: 1
+2026-09-24 00:16:54,374 [INFO   ]  Re-alignment of soft-clips done. N candidates: 1
+2026-09-24 00:16:54,374 [INFO   ]  Number of candidate SVs merged: 0
+2026-09-24 00:16:54,374 [INFO   ]  Number of candidate SVs after merge: 1
+2026-09-24 00:16:54,388 [INFO   ]  Loaded n=1 chromosome coverage arrays from /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test
+2026-09-24 00:16:54,400 [INFO   ]  Loading Model: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/dysgu_model.1.pkl.gz
+2026-09-24 00:16:54,532 [INFO   ]  Model config: pe, diploid: True, contig features: True. N features: 43
+Traceback (most recent call last):
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/bin/dysgu", line 11, in <module>
+sys.exit(cli())
+^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+return self.main(*args, **kwargs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 1552, in main
+rv = self.invoke(ctx)
+^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 2032, in invoke
+return _process_result(sub_ctx.command.invoke(sub_ctx))
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+return ctx.invoke(self.callback, **ctx.params)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+return callback(*args, **kwargs)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/decorators.py", line 34, in new_func
+return f(get_current_context(), *args, **kwargs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 304, in run_pipeline
+cluster.cluster_reads(ctx.obj)
+File "dysgu/cluster.pyx", line 646, in dysgu.cluster.cluster_reads
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/pandas/core/frame.py", line 4646, in __setitem__
+warnings.warn(
+pandas.errors.ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment.
+Such chained assignment never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+Try using '.loc[row_indexer, col_indexer] = value' instead, to perform the assignment in a single step.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html#chained-assignment
+2026-09-24 00:16:54,803 [WARNING]  WARNING: Command failed with return code 1
+dysgu run -x --drop-gaps False -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:16:55,618 [INFO   ]  [dysgu-run] Version: 1.9.0
+2026-09-24 00:16:55,618 [INFO   ]  run -x --drop-gaps False --regions /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/targets.bed -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2 /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:16:55,618 [INFO   ]  Destination: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2
+2026-09-24 00:16:55,986 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam, n=77, time=0:00:00 h:m:s
+2026-09-24 00:16:55,986 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam
+2026-09-24 00:16:55,987 [INFO   ]  Input file has no index, but --regions was provided, attempting to index
+2026-09-24 00:16:55,991 [INFO   ]  Sample name: DB143
+2026-09-24 00:16:55,991 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf
+2026-09-24 00:16:55,991 [INFO   ]  Running pipeline
+2026-09-24 00:16:55,996 [INFO   ]  Calculating insert size. Removed 3 outliers with insert size >= 486.0
+2026-09-24 00:16:55,996 [INFO   ]  Inferred read length: 100.0, insert median: 229, insert stdev: 47
+2026-09-24 00:16:55,996 [INFO   ]  Max clustering dist: 464
+2026-09-24 00:16:55,996 [INFO   ]  Building cluster graph
+2026-09-24 00:16:55,997 [INFO   ]  Total input reads: 77
+2026-09-24 00:16:55,997 [INFO   ]  Graph constructed
+2026-09-24 00:16:55,997 [INFO   ]  Minimum support: 3
+2026-09-24 00:16:56,033 [INFO   ]  Number of components: 59. N candidates: 1
+2026-09-24 00:16:56,033 [INFO   ]  Re-alignment of soft-clips done. N candidates: 1
+2026-09-24 00:16:56,033 [INFO   ]  Number of candidate SVs merged: 0
+2026-09-24 00:16:56,033 [INFO   ]  Number of candidate SVs after merge: 1
+2026-09-24 00:16:56,046 [INFO   ]  Loaded n=1 chromosome coverage arrays from /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2
+2026-09-24 00:16:56,059 [INFO   ]  Loading Model: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/dysgu_model.1.pkl.gz
+2026-09-24 00:16:56,193 [INFO   ]  Model config: pe, diploid: True, contig features: True. N features: 43
+Traceback (most recent call last):
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/bin/dysgu", line 11, in <module>
+sys.exit(cli())
+^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+return self.main(*args, **kwargs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 1552, in main
+rv = self.invoke(ctx)
+^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 2032, in invoke
+return _process_result(sub_ctx.command.invoke(sub_ctx))
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+return ctx.invoke(self.callback, **ctx.params)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+return callback(*args, **kwargs)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/decorators.py", line 34, in new_func
+return f(get_current_context(), *args, **kwargs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 304, in run_pipeline
+cluster.cluster_reads(ctx.obj)
+File "dysgu/cluster.pyx", line 646, in dysgu.cluster.cluster_reads
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/pandas/core/frame.py", line 4646, in __setitem__
+warnings.warn(
+pandas.errors.ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment.
+Such chained assignment never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+Try using '.loc[row_indexer, col_indexer] = value' instead, to perform the assignment in a single step.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html#chained-assignment
+2026-09-24 00:16:56,442 [WARNING]  WARNING: Command failed with return code 1
+dysgu run -x --drop-gaps False --regions /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/targets.bed -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2 /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:16:57,256 [INFO   ]  [dysgu-run] Version: 1.9.0
+2026-09-24 00:16:57,256 [INFO   ]  run -x --drop-gaps False --procs 2 --regions /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/targets.bed -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2 /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:16:57,256 [INFO   ]  Destination: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2
+2026-09-24 00:16:57,640 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam, n=77, time=0:00:00 h:m:s
+2026-09-24 00:16:57,640 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam
+2026-09-24 00:16:57,645 [INFO   ]  Sample name: DB143
+2026-09-24 00:16:57,645 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf
+2026-09-24 00:16:57,645 [INFO   ]  Running pipeline
+2026-09-24 00:16:57,652 [INFO   ]  Calculating insert size. Removed 3 outliers with insert size >= 486.0
+2026-09-24 00:16:57,652 [INFO   ]  Inferred read length: 100.0, insert median: 229, insert stdev: 47
+2026-09-24 00:16:57,652 [INFO   ]  Max clustering dist: 464
+2026-09-24 00:16:57,652 [INFO   ]  Building cluster graph
+2026-09-24 00:16:57,653 [INFO   ]  Total input reads: 77
+2026-09-24 00:16:57,653 [INFO   ]  Graph constructed
+2026-09-24 00:16:57,653 [INFO   ]  Minimum support: 3
+2026-09-24 00:16:57,713 [INFO   ]  Number of components: 59. N candidates: 1
+2026-09-24 00:16:57,713 [INFO   ]  Re-alignment of soft-clips done. N candidates: 1
+2026-09-24 00:16:57,713 [INFO   ]  Number of candidate SVs merged: 0
+2026-09-24 00:16:57,713 [INFO   ]  Number of candidate SVs after merge: 1
+2026-09-24 00:16:57,725 [INFO   ]  Loaded n=1 chromosome coverage arrays from /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2
+2026-09-24 00:16:57,740 [INFO   ]  Loading Model: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/dysgu_model.1.pkl.gz
+2026-09-24 00:16:57,874 [INFO   ]  Model config: pe, diploid: True, contig features: True. N features: 43
+Traceback (most recent call last):
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/bin/dysgu", line 11, in <module>
+sys.exit(cli())
+^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+return self.main(*args, **kwargs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 1552, in main
+rv = self.invoke(ctx)
+^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 2032, in invoke
+return _process_result(sub_ctx.command.invoke(sub_ctx))
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+return ctx.invoke(self.callback, **ctx.params)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+return callback(*args, **kwargs)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/decorators.py", line 34, in new_func
+return f(get_current_context(), *args, **kwargs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 304, in run_pipeline
+cluster.cluster_reads(ctx.obj)
+File "dysgu/cluster.pyx", line 646, in dysgu.cluster.cluster_reads
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/pandas/core/frame.py", line 4646, in __setitem__
+warnings.warn(
+pandas.errors.ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment.
+Such chained assignment never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+Try using '.loc[row_indexer, col_indexer] = value' instead, to perform the assignment in a single step.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html#chained-assignment
+2026-09-24 00:16:58,111 [WARNING]  WARNING: Command failed with return code 1
+dysgu run -x --drop-gaps False --procs 2 --regions /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/targets.bed -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2 /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:16:58,950 [INFO   ]  [dysgu-run] Version: 1.9.0
+2026-09-24 00:16:58,950 [INFO   ]  run -x --drop-gaps False --mode pacbio-sequel2 -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:16:58,950 [INFO   ]  Destination: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test
+2026-09-24 00:16:59,323 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam, n=70, time=0:00:00 h:m:s
+2026-09-24 00:16:59,323 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam
+2026-09-24 00:16:59,326 [INFO   ]  Sample name: DB143
+2026-09-24 00:16:59,326 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf
+2026-09-24 00:16:59,326 [INFO   ]  Running pipeline
+2026-09-24 00:16:59,327 [INFO   ]  Sequence divergence: 0.02
+2026-09-24 00:16:59,327 [INFO   ]  Building cluster graph
+2026-09-24 00:16:59,328 [INFO   ]  Total input reads: 70
+2026-09-24 00:16:59,328 [INFO   ]  Graph constructed
+2026-09-24 00:16:59,328 [INFO   ]  Inferred minimum support: 2
+2026-09-24 00:16:59,360 [CRITICA]  No events found
+2026-09-24 00:16:59,360 [INFO   ]  dysgu run /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam complete, time=0:00:00 h:m:s
+PASS: dysgu run -x --drop-gaps False --mode pacbio-sequel2 -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+2026-09-24 00:17:00,372 [INFO   ]  [dysgu-call] Version: 1.9.0
+2026-09-24 00:17:00,372 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:17:00,372 [INFO   ]  call -x --drop-gaps False -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:17:00,374 [INFO   ]  Sample name: DB143
+2026-09-24 00:17:00,374 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf
+2026-09-24 00:17:00,374 [INFO   ]  Running pipeline
+2026-09-24 00:17:00,378 [INFO   ]  Calculating insert size. Removed 3 outliers with insert size >= 486.0
+2026-09-24 00:17:00,378 [INFO   ]  Inferred read length: 100.0, insert median: 229, insert stdev: 47
+2026-09-24 00:17:00,378 [INFO   ]  Max clustering dist: 464
+2026-09-24 00:17:00,378 [INFO   ]  Building cluster graph
+2026-09-24 00:17:00,737 [INFO   ]  Total input reads: 77
+2026-09-24 00:17:00,737 [INFO   ]  Graph constructed
+2026-09-24 00:17:00,737 [INFO   ]  Minimum support: 3
+2026-09-24 00:17:00,773 [INFO   ]  Number of components: 59. N candidates: 1
+2026-09-24 00:17:00,773 [INFO   ]  Re-alignment of soft-clips done. N candidates: 1
+2026-09-24 00:17:00,773 [INFO   ]  Number of candidate SVs merged: 0
+2026-09-24 00:17:00,773 [INFO   ]  Number of candidate SVs after merge: 1
+2026-09-24 00:17:00,786 [INFO   ]  Loaded n=1 chromosome coverage arrays from /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test
+2026-09-24 00:17:00,804 [INFO   ]  Loading Model: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/dysgu_model.1.pkl.gz
+2026-09-24 00:17:00,936 [INFO   ]  Model config: pe, diploid: True, contig features: True. N features: 43
+Traceback (most recent call last):
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/bin/dysgu", line 11, in <module>
+sys.exit(cli())
+^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+return self.main(*args, **kwargs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 1552, in main
+rv = self.invoke(ctx)
+^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 2032, in invoke
+return _process_result(sub_ctx.command.invoke(sub_ctx))
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+return ctx.invoke(self.callback, **ctx.params)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+return callback(*args, **kwargs)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/decorators.py", line 34, in new_func
+return f(get_current_context(), *args, **kwargs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 463, in call_events
+cluster.cluster_reads(ctx.obj)
+File "dysgu/cluster.pyx", line 646, in dysgu.cluster.cluster_reads
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/pandas/core/frame.py", line 4646, in __setitem__
+warnings.warn(
+pandas.errors.ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment.
+Such chained assignment never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+Try using '.loc[row_indexer, col_indexer] = value' instead, to perform the assignment in a single step.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html#chained-assignment
+2026-09-24 00:17:01,186 [WARNING]  WARNING: Command failed with return code 1
+dysgu call -x --drop-gaps False -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:17:02,001 [INFO   ]  [dysgu-merge] Version: 1.9.0
+2026-09-24 00:17:02,013 [INFO   ]  Merge method auto: all-vs-all
+Traceback (most recent call last):
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/bin/dysgu", line 11, in <module>
+sys.exit(cli())
+^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 1631, in __call__
+return self.main(*args, **kwargs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 1552, in main
+rv = self.invoke(ctx)
+^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 2032, in invoke
+return _process_result(sub_ctx.command.invoke(sub_ctx))
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 1415, in invoke
+return ctx.invoke(self.callback, **ctx.params)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/core.py", line 910, in invoke
+return callback(*args, **kwargs)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/decorators.py", line 34, in new_func
+return f(get_current_context(), *args, **kwargs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 509, in view_data
+view.view_file(ctx.obj)
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/view.py", line 1337, in view_file
+seen_names, names_list = get_names_list(args["input_files"])
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/view.py", line 553, in get_names_list
+name = list(pysam.VariantFile(item, 'r').header.samples)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "pysam/libcbcf.pyx", line 4705, in pysam.libcbcf.VariantFile.__init__
+File "pysam/libcbcf.pyx", line 4937, in pysam.libcbcf.VariantFile.open
+ValueError: invalid file `b'/home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.dysgu1.9.0.vcf'` (mode=`b'r'`) - is it VCF/BCF format?
+2026-09-24 00:17:02,227 [WARNING]  WARNING: Command failed with return code 1
+dysgu merge /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.merge.dysgu1.9.0.vcf
+2026-09-24 00:17:02,227 [INFO   ]  Run test complete

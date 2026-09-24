@@ -1,0 +1,137 @@
+2026-09-24 00:18:13,754 [INFO   ]  [dysgu-test] Version: 1.9.0
+2026-09-24 00:18:13,754 [INFO   ]  Current directory: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run
+2026-09-24 00:18:14,547 [INFO   ]  [dysgu-fetch] Version: 1.9.0
+2026-09-24 00:18:14,922 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam, n=77, time=0:00:00 h:m:s
+PASS: dysgu fetch -x  /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+2026-09-24 00:18:15,919 [INFO   ]  [dysgu-run] Version: 1.9.0
+2026-09-24 00:18:15,919 [INFO   ]  run -x --drop-gaps False -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:18:15,919 [INFO   ]  Destination: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test
+2026-09-24 00:18:16,301 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam, n=77, time=0:00:00 h:m:s
+2026-09-24 00:18:16,302 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam
+2026-09-24 00:18:16,305 [INFO   ]  Sample name: DB143
+2026-09-24 00:18:16,305 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.dysgu1.9.0.vcf
+2026-09-24 00:18:16,305 [INFO   ]  Running pipeline
+2026-09-24 00:18:16,310 [INFO   ]  Calculating insert size. Removed 3 outliers with insert size >= 486.0
+2026-09-24 00:18:16,310 [INFO   ]  Inferred read length: 100.0, insert median: 229, insert stdev: 47
+2026-09-24 00:18:16,310 [INFO   ]  Max clustering dist: 464
+2026-09-24 00:18:16,310 [INFO   ]  Building cluster graph
+2026-09-24 00:18:16,311 [INFO   ]  Total input reads: 77
+2026-09-24 00:18:16,311 [INFO   ]  Graph constructed
+2026-09-24 00:18:16,311 [INFO   ]  Minimum support: 3
+2026-09-24 00:18:16,349 [INFO   ]  Number of components: 59. N candidates: 1
+2026-09-24 00:18:16,349 [INFO   ]  Re-alignment of soft-clips done. N candidates: 1
+2026-09-24 00:18:16,349 [INFO   ]  Number of candidate SVs merged: 0
+2026-09-24 00:18:16,349 [INFO   ]  Number of candidate SVs after merge: 1
+2026-09-24 00:18:16,363 [INFO   ]  Loaded n=1 chromosome coverage arrays from /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test
+2026-09-24 00:18:16,378 [INFO   ]  Loading Model: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/dysgu_model.1.pkl.gz
+2026-09-24 00:18:16,507 [INFO   ]  Model config: pe, diploid: True, contig features: True. N features: 43
+2026-09-24 00:18:16,519 [INFO   ]  dysgu call /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam complete, n=1, time=0:00:00 h:m:s
+2026-09-24 00:18:16,519 [INFO   ]  dysgu run /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam complete, time=0:00:00 h:m:s
+PASS: dysgu run -x --drop-gaps False -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+2026-09-24 00:18:17,504 [INFO   ]  [dysgu-run] Version: 1.9.0
+2026-09-24 00:18:17,504 [INFO   ]  run -x --drop-gaps False --regions /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/targets.bed -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2 /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:18:17,504 [INFO   ]  Destination: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2
+2026-09-24 00:18:17,849 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam, n=77, time=0:00:00 h:m:s
+2026-09-24 00:18:17,850 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam
+2026-09-24 00:18:17,850 [INFO   ]  Input file has no index, but --regions was provided, attempting to index
+2026-09-24 00:18:17,853 [INFO   ]  Sample name: DB143
+2026-09-24 00:18:17,853 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf
+2026-09-24 00:18:17,853 [INFO   ]  Running pipeline
+2026-09-24 00:18:17,858 [INFO   ]  Calculating insert size. Removed 3 outliers with insert size >= 486.0
+2026-09-24 00:18:17,858 [INFO   ]  Inferred read length: 100.0, insert median: 229, insert stdev: 47
+2026-09-24 00:18:17,858 [INFO   ]  Max clustering dist: 464
+2026-09-24 00:18:17,858 [INFO   ]  Building cluster graph
+2026-09-24 00:18:17,858 [INFO   ]  Total input reads: 77
+2026-09-24 00:18:17,858 [INFO   ]  Graph constructed
+2026-09-24 00:18:17,858 [INFO   ]  Minimum support: 3
+2026-09-24 00:18:17,890 [INFO   ]  Number of components: 59. N candidates: 1
+2026-09-24 00:18:17,890 [INFO   ]  Re-alignment of soft-clips done. N candidates: 1
+2026-09-24 00:18:17,890 [INFO   ]  Number of candidate SVs merged: 0
+2026-09-24 00:18:17,890 [INFO   ]  Number of candidate SVs after merge: 1
+2026-09-24 00:18:17,901 [INFO   ]  Loaded n=1 chromosome coverage arrays from /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2
+2026-09-24 00:18:17,914 [INFO   ]  Loading Model: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/dysgu_model.1.pkl.gz
+2026-09-24 00:18:18,039 [INFO   ]  Model config: pe, diploid: True, contig features: True. N features: 43
+2026-09-24 00:18:18,052 [INFO   ]  dysgu call /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam complete, n=1, time=0:00:00 h:m:s
+2026-09-24 00:18:18,052 [INFO   ]  dysgu run /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam complete, time=0:00:00 h:m:s
+PASS: dysgu run -x --drop-gaps False --regions /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/targets.bed -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2 /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+2026-09-24 00:18:19,088 [INFO   ]  [dysgu-run] Version: 1.9.0
+2026-09-24 00:18:19,088 [INFO   ]  run -x --drop-gaps False --procs 2 --regions /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/targets.bed -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2 /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:18:19,088 [INFO   ]  Destination: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2
+2026-09-24 00:18:19,468 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam, n=77, time=0:00:00 h:m:s
+2026-09-24 00:18:19,468 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam
+2026-09-24 00:18:19,471 [INFO   ]  Sample name: DB143
+2026-09-24 00:18:19,471 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf
+2026-09-24 00:18:19,471 [INFO   ]  Running pipeline
+2026-09-24 00:18:19,476 [INFO   ]  Calculating insert size. Removed 3 outliers with insert size >= 486.0
+2026-09-24 00:18:19,476 [INFO   ]  Inferred read length: 100.0, insert median: 229, insert stdev: 47
+2026-09-24 00:18:19,476 [INFO   ]  Max clustering dist: 464
+2026-09-24 00:18:19,476 [INFO   ]  Building cluster graph
+2026-09-24 00:18:19,476 [INFO   ]  Total input reads: 77
+2026-09-24 00:18:19,476 [INFO   ]  Graph constructed
+2026-09-24 00:18:19,476 [INFO   ]  Minimum support: 3
+2026-09-24 00:18:19,528 [INFO   ]  Number of components: 59. N candidates: 1
+2026-09-24 00:18:19,528 [INFO   ]  Re-alignment of soft-clips done. N candidates: 1
+2026-09-24 00:18:19,528 [INFO   ]  Number of candidate SVs merged: 0
+2026-09-24 00:18:19,528 [INFO   ]  Number of candidate SVs after merge: 1
+2026-09-24 00:18:19,540 [INFO   ]  Loaded n=1 chromosome coverage arrays from /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2
+2026-09-24 00:18:19,555 [INFO   ]  Loading Model: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/dysgu_model.1.pkl.gz
+2026-09-24 00:18:19,686 [INFO   ]  Model config: pe, diploid: True, contig features: True. N features: 43
+2026-09-24 00:18:19,698 [INFO   ]  dysgu call /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam complete, n=1, time=0:00:00 h:m:s
+2026-09-24 00:18:19,699 [INFO   ]  dysgu run /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam complete, time=0:00:00 h:m:s
+PASS: dysgu run -x --drop-gaps False --procs 2 --regions /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/targets.bed -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2 /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+2026-09-24 00:18:20,664 [INFO   ]  [dysgu-run] Version: 1.9.0
+2026-09-24 00:18:20,664 [INFO   ]  run -x --drop-gaps False --mode pacbio-sequel2 -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:18:20,664 [INFO   ]  Destination: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test
+2026-09-24 00:18:21,047 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam, n=70, time=0:00:00 h:m:s
+2026-09-24 00:18:21,047 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam
+2026-09-24 00:18:21,051 [INFO   ]  Sample name: DB143
+2026-09-24 00:18:21,051 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf
+2026-09-24 00:18:21,051 [INFO   ]  Running pipeline
+2026-09-24 00:18:21,052 [INFO   ]  Sequence divergence: 0.02
+2026-09-24 00:18:21,052 [INFO   ]  Building cluster graph
+2026-09-24 00:18:21,052 [INFO   ]  Total input reads: 70
+2026-09-24 00:18:21,052 [INFO   ]  Graph constructed
+2026-09-24 00:18:21,053 [INFO   ]  Inferred minimum support: 2
+2026-09-24 00:18:21,081 [CRITICA]  No events found
+2026-09-24 00:18:21,081 [INFO   ]  dysgu run /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam complete, time=0:00:00 h:m:s
+PASS: dysgu run -x --drop-gaps False --mode pacbio-sequel2 -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+2026-09-24 00:18:22,013 [INFO   ]  [dysgu-call] Version: 1.9.0
+2026-09-24 00:18:22,013 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:18:22,013 [INFO   ]  call -x --drop-gaps False -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:18:22,015 [INFO   ]  Sample name: DB143
+2026-09-24 00:18:22,015 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf
+2026-09-24 00:18:22,015 [INFO   ]  Running pipeline
+2026-09-24 00:18:22,020 [INFO   ]  Calculating insert size. Removed 3 outliers with insert size >= 486.0
+2026-09-24 00:18:22,020 [INFO   ]  Inferred read length: 100.0, insert median: 229, insert stdev: 47
+2026-09-24 00:18:22,020 [INFO   ]  Max clustering dist: 464
+2026-09-24 00:18:22,020 [INFO   ]  Building cluster graph
+2026-09-24 00:18:22,376 [INFO   ]  Total input reads: 77
+2026-09-24 00:18:22,377 [INFO   ]  Graph constructed
+2026-09-24 00:18:22,377 [INFO   ]  Minimum support: 3
+2026-09-24 00:18:22,408 [INFO   ]  Number of components: 59. N candidates: 1
+2026-09-24 00:18:22,408 [INFO   ]  Re-alignment of soft-clips done. N candidates: 1
+2026-09-24 00:18:22,408 [INFO   ]  Number of candidate SVs merged: 0
+2026-09-24 00:18:22,408 [INFO   ]  Number of candidate SVs after merge: 1
+2026-09-24 00:18:22,419 [INFO   ]  Loaded n=1 chromosome coverage arrays from /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test
+2026-09-24 00:18:22,437 [INFO   ]  Loading Model: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/dysgu_model.1.pkl.gz
+2026-09-24 00:18:22,560 [INFO   ]  Model config: pe, diploid: True, contig features: True. N features: 43
+2026-09-24 00:18:22,573 [INFO   ]  dysgu call /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam complete, n=1, time=0:00:00 h:m:s
+PASS: dysgu call -x --drop-gaps False -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+2026-09-24 00:18:23,528 [INFO   ]  [dysgu-merge] Version: 1.9.0
+2026-09-24 00:18:23,539 [INFO   ]  Merge method auto: all-vs-all
+[W::bcf_hdr_check_sanity] GQ should be declared as Type=Integer
+2026-09-24 00:18:23,544 [INFO   ]  Sample DB143 is present in more than one input file, sample in file /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf will be named DB143_1 in merged vcf
+2026-09-24 00:18:23,572 [INFO   ]  Merge distance: 500 bp
+2026-09-24 00:18:23,577 [INFO   ]  SVs output to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.merge.dysgu1.9.0.vcf
+2026-09-24 00:18:23,578 [INFO   ]  Samples: ['DB143', 'DB143_1']
+2026-09-24 00:18:23,581 [INFO   ]  Rows after merge 1
+2026-09-24 00:18:23,581 [INFO   ]  dysgu merge complete h:m:s, 0:00:00
+PASS: dysgu merge /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.merge.dysgu1.9.0.vcf
+
+2026-09-24 00:18:23,777 [INFO   ]  Run test complete

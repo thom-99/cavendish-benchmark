@@ -1,0 +1,165 @@
+2026-09-24 00:17:19,870 [INFO   ]  [dysgu-test] Version: 1.9.0
+2026-09-24 00:17:19,870 [INFO   ]  Current directory: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run
+2026-09-24 00:17:20,669 [INFO   ]  [dysgu-fetch] Version: 1.9.0
+2026-09-24 00:17:21,035 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam, n=77, time=0:00:00 h:m:s
+PASS: dysgu fetch -x  /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+2026-09-24 00:17:22,116 [INFO   ]  [dysgu-run] Version: 1.9.0
+2026-09-24 00:17:22,116 [INFO   ]  run -x --drop-gaps False -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:17:22,117 [INFO   ]  Destination: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test
+2026-09-24 00:17:22,471 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam, n=77, time=0:00:00 h:m:s
+2026-09-24 00:17:22,471 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam
+2026-09-24 00:17:22,473 [INFO   ]  Sample name: DB143
+2026-09-24 00:17:22,473 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.dysgu1.9.0.vcf
+2026-09-24 00:17:22,473 [INFO   ]  Running pipeline
+2026-09-24 00:17:22,478 [INFO   ]  Calculating insert size. Removed 3 outliers with insert size >= 486.0
+2026-09-24 00:17:22,478 [INFO   ]  Inferred read length: 100.0, insert median: 229, insert stdev: 47
+2026-09-24 00:17:22,478 [INFO   ]  Max clustering dist: 464
+2026-09-24 00:17:22,478 [INFO   ]  Building cluster graph
+2026-09-24 00:17:22,479 [INFO   ]  Total input reads: 77
+2026-09-24 00:17:22,479 [INFO   ]  Graph constructed
+2026-09-24 00:17:22,479 [INFO   ]  Minimum support: 3
+2026-09-24 00:17:22,514 [INFO   ]  Number of components: 59. N candidates: 1
+2026-09-24 00:17:22,514 [INFO   ]  Re-alignment of soft-clips done. N candidates: 1
+2026-09-24 00:17:22,514 [INFO   ]  Number of candidate SVs merged: 0
+2026-09-24 00:17:22,514 [INFO   ]  Number of candidate SVs after merge: 1
+2026-09-24 00:17:22,532 [INFO   ]  Loaded n=1 chromosome coverage arrays from /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test
+2026-09-24 00:17:22,573 [INFO   ]  Loading Model: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/dysgu_model.1.pkl.gz
+2026-09-24 00:17:22,753 [INFO   ]  Model config: pe, diploid: True, contig features: True. N features: 43
+/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py:304: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment.
+Such chained assignment never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+Try using '.loc[row_indexer, col_indexer] = value' instead, to perform the assignment in a single step.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html#chained-assignment
+cluster.cluster_reads(ctx.obj)
+2026-09-24 00:17:22,766 [INFO   ]  dysgu call /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam complete, n=1, time=0:00:00 h:m:s
+2026-09-24 00:17:22,766 [INFO   ]  dysgu run /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam complete, time=0:00:00 h:m:s
+PASS: dysgu run -x --drop-gaps False -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+2026-09-24 00:17:23,869 [INFO   ]  [dysgu-run] Version: 1.9.0
+2026-09-24 00:17:23,870 [INFO   ]  run -x --drop-gaps False --regions /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/targets.bed -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2 /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:17:23,870 [INFO   ]  Destination: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2
+2026-09-24 00:17:24,249 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam, n=77, time=0:00:00 h:m:s
+2026-09-24 00:17:24,250 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam
+2026-09-24 00:17:24,250 [INFO   ]  Input file has no index, but --regions was provided, attempting to index
+2026-09-24 00:17:24,256 [INFO   ]  Sample name: DB143
+2026-09-24 00:17:24,256 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf
+2026-09-24 00:17:24,256 [INFO   ]  Running pipeline
+2026-09-24 00:17:24,268 [INFO   ]  Calculating insert size. Removed 3 outliers with insert size >= 486.0
+2026-09-24 00:17:24,269 [INFO   ]  Inferred read length: 100.0, insert median: 229, insert stdev: 47
+2026-09-24 00:17:24,269 [INFO   ]  Max clustering dist: 464
+2026-09-24 00:17:24,269 [INFO   ]  Building cluster graph
+2026-09-24 00:17:24,270 [INFO   ]  Total input reads: 77
+2026-09-24 00:17:24,270 [INFO   ]  Graph constructed
+2026-09-24 00:17:24,270 [INFO   ]  Minimum support: 3
+2026-09-24 00:17:24,323 [INFO   ]  Number of components: 59. N candidates: 1
+2026-09-24 00:17:24,323 [INFO   ]  Re-alignment of soft-clips done. N candidates: 1
+2026-09-24 00:17:24,323 [INFO   ]  Number of candidate SVs merged: 0
+2026-09-24 00:17:24,323 [INFO   ]  Number of candidate SVs after merge: 1
+2026-09-24 00:17:24,343 [INFO   ]  Loaded n=1 chromosome coverage arrays from /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2
+2026-09-24 00:17:24,371 [INFO   ]  Loading Model: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/dysgu_model.1.pkl.gz
+2026-09-24 00:17:24,545 [INFO   ]  Model config: pe, diploid: True, contig features: True. N features: 43
+/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py:304: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment.
+Such chained assignment never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+Try using '.loc[row_indexer, col_indexer] = value' instead, to perform the assignment in a single step.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html#chained-assignment
+cluster.cluster_reads(ctx.obj)
+2026-09-24 00:17:24,570 [INFO   ]  dysgu call /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam complete, n=1, time=0:00:00 h:m:s
+2026-09-24 00:17:24,571 [INFO   ]  dysgu run /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam complete, time=0:00:00 h:m:s
+PASS: dysgu run -x --drop-gaps False --regions /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/targets.bed -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2 /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+2026-09-24 00:17:25,761 [INFO   ]  [dysgu-run] Version: 1.9.0
+2026-09-24 00:17:25,761 [INFO   ]  run -x --drop-gaps False --procs 2 --regions /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/targets.bed -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2 /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:17:25,761 [INFO   ]  Destination: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2
+2026-09-24 00:17:26,139 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam, n=77, time=0:00:00 h:m:s
+2026-09-24 00:17:26,139 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam
+2026-09-24 00:17:26,144 [INFO   ]  Sample name: DB143
+2026-09-24 00:17:26,144 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf
+2026-09-24 00:17:26,144 [INFO   ]  Running pipeline
+2026-09-24 00:17:26,150 [INFO   ]  Calculating insert size. Removed 3 outliers with insert size >= 486.0
+2026-09-24 00:17:26,150 [INFO   ]  Inferred read length: 100.0, insert median: 229, insert stdev: 47
+2026-09-24 00:17:26,150 [INFO   ]  Max clustering dist: 464
+2026-09-24 00:17:26,150 [INFO   ]  Building cluster graph
+2026-09-24 00:17:26,151 [INFO   ]  Total input reads: 77
+2026-09-24 00:17:26,151 [INFO   ]  Graph constructed
+2026-09-24 00:17:26,151 [INFO   ]  Minimum support: 3
+2026-09-24 00:17:26,211 [INFO   ]  Number of components: 59. N candidates: 1
+2026-09-24 00:17:26,211 [INFO   ]  Re-alignment of soft-clips done. N candidates: 1
+2026-09-24 00:17:26,211 [INFO   ]  Number of candidate SVs merged: 0
+2026-09-24 00:17:26,211 [INFO   ]  Number of candidate SVs after merge: 1
+2026-09-24 00:17:26,224 [INFO   ]  Loaded n=1 chromosome coverage arrays from /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2
+2026-09-24 00:17:26,239 [INFO   ]  Loading Model: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/dysgu_model.1.pkl.gz
+2026-09-24 00:17:26,377 [INFO   ]  Model config: pe, diploid: True, contig features: True. N features: 43
+/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py:304: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment.
+Such chained assignment never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+Try using '.loc[row_indexer, col_indexer] = value' instead, to perform the assignment in a single step.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html#chained-assignment
+cluster.cluster_reads(ctx.obj)
+2026-09-24 00:17:26,390 [INFO   ]  dysgu call /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam complete, n=1, time=0:00:00 h:m:s
+2026-09-24 00:17:26,391 [INFO   ]  dysgu run /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam complete, time=0:00:00 h:m:s
+PASS: dysgu run -x --drop-gaps False --procs 2 --regions /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/targets.bed -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2 /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+2026-09-24 00:17:27,522 [INFO   ]  [dysgu-run] Version: 1.9.0
+2026-09-24 00:17:27,522 [INFO   ]  run -x --drop-gaps False --mode pacbio-sequel2 -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:17:27,522 [INFO   ]  Destination: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test
+2026-09-24 00:17:27,913 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam, n=70, time=0:00:00 h:m:s
+2026-09-24 00:17:27,913 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam
+2026-09-24 00:17:27,916 [INFO   ]  Sample name: DB143
+2026-09-24 00:17:27,916 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf
+2026-09-24 00:17:27,916 [INFO   ]  Running pipeline
+2026-09-24 00:17:27,917 [INFO   ]  Sequence divergence: 0.02
+2026-09-24 00:17:27,917 [INFO   ]  Building cluster graph
+2026-09-24 00:17:27,918 [INFO   ]  Total input reads: 70
+2026-09-24 00:17:27,918 [INFO   ]  Graph constructed
+2026-09-24 00:17:27,918 [INFO   ]  Inferred minimum support: 2
+2026-09-24 00:17:27,950 [CRITICA]  No events found
+2026-09-24 00:17:27,950 [INFO   ]  dysgu run /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam complete, time=0:00:00 h:m:s
+PASS: dysgu run -x --drop-gaps False --mode pacbio-sequel2 -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+2026-09-24 00:17:28,943 [INFO   ]  [dysgu-call] Version: 1.9.0
+2026-09-24 00:17:28,943 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:17:28,943 [INFO   ]  call -x --drop-gaps False -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:17:28,945 [INFO   ]  Sample name: DB143
+2026-09-24 00:17:28,945 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf
+2026-09-24 00:17:28,945 [INFO   ]  Running pipeline
+2026-09-24 00:17:28,950 [INFO   ]  Calculating insert size. Removed 3 outliers with insert size >= 486.0
+2026-09-24 00:17:28,950 [INFO   ]  Inferred read length: 100.0, insert median: 229, insert stdev: 47
+2026-09-24 00:17:28,950 [INFO   ]  Max clustering dist: 464
+2026-09-24 00:17:28,950 [INFO   ]  Building cluster graph
+2026-09-24 00:17:29,291 [INFO   ]  Total input reads: 77
+2026-09-24 00:17:29,291 [INFO   ]  Graph constructed
+2026-09-24 00:17:29,291 [INFO   ]  Minimum support: 3
+2026-09-24 00:17:29,325 [INFO   ]  Number of components: 59. N candidates: 1
+2026-09-24 00:17:29,325 [INFO   ]  Re-alignment of soft-clips done. N candidates: 1
+2026-09-24 00:17:29,325 [INFO   ]  Number of candidate SVs merged: 0
+2026-09-24 00:17:29,325 [INFO   ]  Number of candidate SVs after merge: 1
+2026-09-24 00:17:29,336 [INFO   ]  Loaded n=1 chromosome coverage arrays from /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test
+2026-09-24 00:17:29,353 [INFO   ]  Loading Model: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/dysgu_model.1.pkl.gz
+2026-09-24 00:17:29,477 [INFO   ]  Model config: pe, diploid: True, contig features: True. N features: 43
+/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py:463: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment.
+Such chained assignment never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+Try using '.loc[row_indexer, col_indexer] = value' instead, to perform the assignment in a single step.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html#chained-assignment
+cluster.cluster_reads(ctx.obj)
+2026-09-24 00:17:29,489 [INFO   ]  dysgu call /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam complete, n=1, time=0:00:00 h:m:s
+PASS: dysgu call -x --drop-gaps False -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+2026-09-24 00:17:30,472 [INFO   ]  [dysgu-merge] Version: 1.9.0
+2026-09-24 00:17:30,483 [INFO   ]  Merge method auto: all-vs-all
+[W::bcf_hdr_check_sanity] GQ should be declared as Type=Integer
+2026-09-24 00:17:30,488 [INFO   ]  Sample DB143 is present in more than one input file, sample in file /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf will be named DB143_1 in merged vcf
+2026-09-24 00:17:30,518 [INFO   ]  Merge distance: 500 bp
+2026-09-24 00:17:30,523 [INFO   ]  SVs output to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.merge.dysgu1.9.0.vcf
+2026-09-24 00:17:30,524 [INFO   ]  Samples: ['DB143', 'DB143_1']
+2026-09-24 00:17:30,527 [INFO   ]  Rows after merge 1
+2026-09-24 00:17:30,527 [INFO   ]  dysgu merge complete h:m:s, 0:00:00
+PASS: dysgu merge /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.merge.dysgu1.9.0.vcf
+
+2026-09-24 00:17:30,710 [INFO   ]  Run test complete

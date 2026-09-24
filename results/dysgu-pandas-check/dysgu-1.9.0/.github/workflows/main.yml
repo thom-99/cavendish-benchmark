@@ -1,0 +1,74 @@
+name: Build
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build_wheels:
+    name: Build wheels on ${{ matrix.os }}
+    env:
+      PREFIX: "/usr/local/"
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-24.04, macOS-26]
+        include:
+          - os: macOS-26
+            arch: arm64
+            target: 26
+          - os: ubuntu-24.04
+            arch: x86_64
+            target: 24
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set correct paths for Homebrew on macOS
+        if: startsWith(matrix.os, 'macOS')
+        run: |
+          export BREW_PREFIX="$(brew --prefix)"
+          export PREFIX="$(brew --prefix)"
+          export PATH="$BREW_PREFIX/bin:$PATH"
+          export LIBRARY_PATH="$BREW_PREFIX/lib:$LIBRARY_PATH"
+          export PKG_CONFIG_PATH="$BREW_PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH"
+          export MACOSX_DEPLOYMENT_TARGET=${{ matrix.target }}.0
+          echo "MACOSX_DEPLOYMENT_TARGET=${{ matrix.target }}.0" >> $GITHUB_ENV
+          echo "CPPFLAGS=-I$BREW_PREFIX/include $CPPFLAGS" >> $GITHUB_ENV
+          echo "LDFLAGS=-L$BREW_PREFIX/lib $LDFLAGS"       >> $GITHUB_ENV
+          echo "CIBW_ENVIRONMENT_MACOS=MACOSX_DEPLOYMENT_TARGET=${{ matrix.target }}.0 CPPFLAGS=-I$BREW_PREFIX/include LDFLAGS=-L$BREW_PREFIX/lib PKG_CONFIG_PATH=$BREW_PREFIX/lib/pkgconfig" >> $GITHUB_ENV
+
+      - name: Build wheels
+        uses: pypa/cibuildwheel@v3.4.1
+        env:
+          CIBW_PROJECT_REQUIRES_PYTHON: ">=3.10,<3.15"
+          CIBW_SKIP: "*-win32 *-manylinux_i686 pp* *musl* cp*t-*"
+          CIBW_ARCHS_MACOS: "${{ matrix.arch }}"
+          CIBW_ARCHS_LINUX: "auto"
+          CIBW_MANYLINUX_X86_64_IMAGE: manylinux_2_28
+          CIBW_MANYLINUX_AARCH64_IMAGE: manylinux_2_28
+
+          CIBW_BUILD_VERBOSITY: 1
+
+          CIBW_BEFORE_BUILD: |
+            pip install "meson>=0.64" "ninja" "cython>=3.0.0" "numpy" "pysam>=0.23.3"
+
+          CIBW_BEFORE_ALL_MACOS: |
+            brew install libomp libdeflate htslib xz
+
+          CIBW_BEFORE_ALL_LINUX: |
+            bash ci/manylinux-deps
+
+          CIBW_REPAIR_WHEEL_COMMAND_MACOS: |
+            delocate-wheel -w {dest_dir} -v {wheel} --require-target-macos-version ${{ matrix.target }}.0
+
+          CIBW_REPAIR_WHEEL_COMMAND_LINUX: |
+            auditwheel repair -w {dest_dir} {wheel}
+
+          CIBW_TEST_REQUIRES: |
+            cython click>=8.0 superintervals>=0.3.0 numpy scipy pandas pysam>=0.23.3 networkx>=2.4 scikit-learn>=0.22 sortedcontainers lightgbm
+
+          CIBW_TEST_COMMAND: dysgu test --verbose
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wheelhouse-${{ matrix.os }}-${{ matrix.arch }}-${{ github.run_id }}
+          path: ./wheelhouse/*.whl

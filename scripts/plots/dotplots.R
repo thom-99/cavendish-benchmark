@@ -17,6 +17,10 @@ plot_data$caller <- factor(
 )
 
 dot_plot <- ggplot(plot_data, aes(x = value, y = caller)) +
+  geom_segment(
+    aes(x = 0, xend = value, yend = caller),
+    linewidth = 0.4, colour = "#4B0092"
+  ) +
   geom_point(size = 3, colour = "#4B0092") +
   geom_text(
     aes(label = sprintf("%.1f%%", 100 * value)),
@@ -59,6 +63,10 @@ plot_data_duptoins$caller <- factor(
 )
 
 dot_plot_duptoins <- ggplot(plot_data_duptoins, aes(x = value, y = caller)) +
+  geom_segment(
+    aes(x = 0, xend = value, yend = caller),
+    linewidth = 0.4, colour = "#156f15"
+  ) +
   geom_point(size = 3, colour = "#156f15") +
   geom_text(
     aes(label = sprintf("%.1f%%", 100 * value)),

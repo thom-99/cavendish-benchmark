@@ -1,0 +1,231 @@
+2026-09-24 00:18:40,845 [INFO   ]  [dysgu-test] Version: 1.9.0
+2026-09-24 00:18:40,845 [INFO   ]  Current directory: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run
+2026-09-24 00:18:41,634 [INFO   ]  [dysgu-fetch] Version: 1.9.0
+2026-09-24 00:18:41,993 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam, n=77, time=0:00:00 h:m:s
+PASS: dysgu fetch -x  /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+Exception ignored in: <_io.FileIO name=3 mode='rb' closefd=True>
+Traceback (most recent call last):
+  File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 595, in test_command
+    process = Popen(shlex.split(c), stdout=PIPE, stderr=PIPE, text=True)
+    ^^^^^^^
+ResourceWarning: unclosed file <_io.TextIOWrapper name=3 encoding='UTF-8'>
+Exception ignored in: <_io.FileIO name=5 mode='rb' closefd=True>
+Traceback (most recent call last):
+  File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 595, in test_command
+    process = Popen(shlex.split(c), stdout=PIPE, stderr=PIPE, text=True)
+    ^^^^^^^
+ResourceWarning: unclosed file <_io.TextIOWrapper name=5 encoding='UTF-8'>
+2026-09-24 00:18:42,950 [INFO   ]  [dysgu-run] Version: 1.9.0
+2026-09-24 00:18:42,950 [INFO   ]  run -x --drop-gaps False -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:18:42,950 [INFO   ]  Destination: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test
+2026-09-24 00:18:43,330 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam, n=77, time=0:00:00 h:m:s
+2026-09-24 00:18:43,330 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam
+2026-09-24 00:18:43,333 [INFO   ]  Sample name: DB143
+2026-09-24 00:18:43,333 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.dysgu1.9.0.vcf
+2026-09-24 00:18:43,333 [INFO   ]  Running pipeline
+2026-09-24 00:18:43,337 [INFO   ]  Calculating insert size. Removed 3 outliers with insert size >= 486.0
+2026-09-24 00:18:43,337 [INFO   ]  Inferred read length: 100.0, insert median: 229, insert stdev: 47
+2026-09-24 00:18:43,337 [INFO   ]  Max clustering dist: 464
+2026-09-24 00:18:43,338 [INFO   ]  Building cluster graph
+2026-09-24 00:18:43,338 [INFO   ]  Total input reads: 77
+2026-09-24 00:18:43,338 [INFO   ]  Graph constructed
+2026-09-24 00:18:43,338 [INFO   ]  Minimum support: 3
+2026-09-24 00:18:43,366 [INFO   ]  Number of components: 59. N candidates: 1
+2026-09-24 00:18:43,366 [INFO   ]  Re-alignment of soft-clips done. N candidates: 1
+2026-09-24 00:18:43,366 [INFO   ]  Number of candidate SVs merged: 0
+2026-09-24 00:18:43,366 [INFO   ]  Number of candidate SVs after merge: 1
+2026-09-24 00:18:43,379 [INFO   ]  Loaded n=1 chromosome coverage arrays from /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test
+2026-09-24 00:18:43,393 [INFO   ]  Loading Model: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/dysgu_model.1.pkl.gz
+2026-09-24 00:18:43,521 [INFO   ]  Model config: pe, diploid: True, contig features: True. N features: 43
+2026-09-24 00:18:43,534 [INFO   ]  dysgu call /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam complete, n=1, time=0:00:00 h:m:s
+2026-09-24 00:18:43,534 [INFO   ]  dysgu run /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam complete, time=0:00:00 h:m:s
+PASS: dysgu run -x --drop-gaps False -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+Exception ignored in: <_io.FileIO name=4 mode='rb' closefd=True>
+Traceback (most recent call last):
+  File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 595, in test_command
+    process = Popen(shlex.split(c), stdout=PIPE, stderr=PIPE, text=True)
+    ^^^^^^^
+ResourceWarning: unclosed file <_io.TextIOWrapper name=4 encoding='UTF-8'>
+Exception ignored in: <_io.FileIO name=7 mode='rb' closefd=True>
+Traceback (most recent call last):
+  File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 595, in test_command
+    process = Popen(shlex.split(c), stdout=PIPE, stderr=PIPE, text=True)
+    ^^^^^^^
+ResourceWarning: unclosed file <_io.TextIOWrapper name=7 encoding='UTF-8'>
+2026-09-24 00:18:44,513 [INFO   ]  [dysgu-run] Version: 1.9.0
+2026-09-24 00:18:44,514 [INFO   ]  run -x --drop-gaps False --regions /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/targets.bed -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2 /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:18:44,514 [INFO   ]  Destination: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2
+2026-09-24 00:18:44,875 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam, n=77, time=0:00:00 h:m:s
+2026-09-24 00:18:44,875 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam
+2026-09-24 00:18:44,876 [INFO   ]  Input file has no index, but --regions was provided, attempting to index
+2026-09-24 00:18:44,880 [INFO   ]  Sample name: DB143
+2026-09-24 00:18:44,880 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf
+2026-09-24 00:18:44,880 [INFO   ]  Running pipeline
+2026-09-24 00:18:44,884 [INFO   ]  Calculating insert size. Removed 3 outliers with insert size >= 486.0
+2026-09-24 00:18:44,884 [INFO   ]  Inferred read length: 100.0, insert median: 229, insert stdev: 47
+2026-09-24 00:18:44,884 [INFO   ]  Max clustering dist: 464
+2026-09-24 00:18:44,884 [INFO   ]  Building cluster graph
+2026-09-24 00:18:44,885 [INFO   ]  Total input reads: 77
+2026-09-24 00:18:44,885 [INFO   ]  Graph constructed
+2026-09-24 00:18:44,885 [INFO   ]  Minimum support: 3
+2026-09-24 00:18:44,913 [INFO   ]  Number of components: 59. N candidates: 1
+2026-09-24 00:18:44,913 [INFO   ]  Re-alignment of soft-clips done. N candidates: 1
+2026-09-24 00:18:44,913 [INFO   ]  Number of candidate SVs merged: 0
+2026-09-24 00:18:44,913 [INFO   ]  Number of candidate SVs after merge: 1
+2026-09-24 00:18:44,924 [INFO   ]  Loaded n=1 chromosome coverage arrays from /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2
+2026-09-24 00:18:44,937 [INFO   ]  Loading Model: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/dysgu_model.1.pkl.gz
+2026-09-24 00:18:45,061 [INFO   ]  Model config: pe, diploid: True, contig features: True. N features: 43
+2026-09-24 00:18:45,074 [INFO   ]  dysgu call /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam complete, n=1, time=0:00:00 h:m:s
+2026-09-24 00:18:45,074 [INFO   ]  dysgu run /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam complete, time=0:00:00 h:m:s
+PASS: dysgu run -x --drop-gaps False --regions /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/targets.bed -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2 /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+Exception ignored in: <_io.FileIO name=3 mode='rb' closefd=True>
+Traceback (most recent call last):
+  File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 595, in test_command
+    process = Popen(shlex.split(c), stdout=PIPE, stderr=PIPE, text=True)
+    ^^^^^^^
+ResourceWarning: unclosed file <_io.TextIOWrapper name=3 encoding='UTF-8'>
+Exception ignored in: <_io.FileIO name=6 mode='rb' closefd=True>
+Traceback (most recent call last):
+  File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 595, in test_command
+    process = Popen(shlex.split(c), stdout=PIPE, stderr=PIPE, text=True)
+    ^^^^^^^
+ResourceWarning: unclosed file <_io.TextIOWrapper name=6 encoding='UTF-8'>
+2026-09-24 00:18:46,053 [INFO   ]  [dysgu-run] Version: 1.9.0
+2026-09-24 00:18:46,053 [INFO   ]  run -x --drop-gaps False --procs 2 --regions /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/targets.bed -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2 /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:18:46,053 [INFO   ]  Destination: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2
+2026-09-24 00:18:46,412 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam, n=77, time=0:00:00 h:m:s
+2026-09-24 00:18:46,412 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam
+2026-09-24 00:18:46,415 [INFO   ]  Sample name: DB143
+2026-09-24 00:18:46,415 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf
+2026-09-24 00:18:46,415 [INFO   ]  Running pipeline
+2026-09-24 00:18:46,419 [INFO   ]  Calculating insert size. Removed 3 outliers with insert size >= 486.0
+2026-09-24 00:18:46,419 [INFO   ]  Inferred read length: 100.0, insert median: 229, insert stdev: 47
+2026-09-24 00:18:46,419 [INFO   ]  Max clustering dist: 464
+2026-09-24 00:18:46,419 [INFO   ]  Building cluster graph
+2026-09-24 00:18:46,420 [INFO   ]  Total input reads: 77
+2026-09-24 00:18:46,420 [INFO   ]  Graph constructed
+2026-09-24 00:18:46,420 [INFO   ]  Minimum support: 3
+Exception ignored in: <_io.FileIO name='/home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/job_0.done.pkl' mode='rb' closefd=True>
+Traceback (most recent call last):
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 304, in run_pipeline
+cluster.cluster_reads(ctx.obj)
+ResourceWarning: unclosed file <_io.BufferedReader name='/home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/job_0.done.pkl'>
+2026-09-24 00:18:46,472 [INFO   ]  Number of components: 59. N candidates: 1
+2026-09-24 00:18:46,472 [INFO   ]  Re-alignment of soft-clips done. N candidates: 1
+2026-09-24 00:18:46,472 [INFO   ]  Number of candidate SVs merged: 0
+2026-09-24 00:18:46,472 [INFO   ]  Number of candidate SVs after merge: 1
+2026-09-24 00:18:46,483 [INFO   ]  Loaded n=1 chromosome coverage arrays from /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2
+Exception ignored in: <_io.FileIO name='/home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/job_1.done.pkl' mode='rb' closefd=True>
+Traceback (most recent call last):
+File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 304, in run_pipeline
+cluster.cluster_reads(ctx.obj)
+ResourceWarning: unclosed file <_io.BufferedReader name='/home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/job_1.done.pkl'>
+2026-09-24 00:18:46,497 [INFO   ]  Loading Model: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/dysgu_model.1.pkl.gz
+2026-09-24 00:18:46,622 [INFO   ]  Model config: pe, diploid: True, contig features: True. N features: 43
+2026-09-24 00:18:46,635 [INFO   ]  dysgu call /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2/small.dysgu_reads.bam complete, n=1, time=0:00:00 h:m:s
+2026-09-24 00:18:46,636 [INFO   ]  dysgu run /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam complete, time=0:00:00 h:m:s
+PASS: dysgu run -x --drop-gaps False --procs 2 --regions /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/targets.bed -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test_regions.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test2 /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+Exception ignored in: <_io.FileIO name=4 mode='rb' closefd=True>
+Traceback (most recent call last):
+  File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 595, in test_command
+    process = Popen(shlex.split(c), stdout=PIPE, stderr=PIPE, text=True)
+    ^^^^^^^
+ResourceWarning: unclosed file <_io.TextIOWrapper name=4 encoding='UTF-8'>
+Exception ignored in: <_io.FileIO name=7 mode='rb' closefd=True>
+Traceback (most recent call last):
+  File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 595, in test_command
+    process = Popen(shlex.split(c), stdout=PIPE, stderr=PIPE, text=True)
+    ^^^^^^^
+ResourceWarning: unclosed file <_io.TextIOWrapper name=7 encoding='UTF-8'>
+2026-09-24 00:18:47,632 [INFO   ]  [dysgu-run] Version: 1.9.0
+2026-09-24 00:18:47,632 [INFO   ]  run -x --drop-gaps False --mode pacbio-sequel2 -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:18:47,632 [INFO   ]  Destination: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test
+2026-09-24 00:18:48,003 [INFO   ]  dysgu fetch /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam written to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam, n=70, time=0:00:00 h:m:s
+2026-09-24 00:18:48,003 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test/small.dysgu_reads.bam
+2026-09-24 00:18:48,007 [INFO   ]  Sample name: DB143
+2026-09-24 00:18:48,008 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf
+2026-09-24 00:18:48,008 [INFO   ]  Running pipeline
+2026-09-24 00:18:48,009 [INFO   ]  Sequence divergence: 0.02
+2026-09-24 00:18:48,009 [INFO   ]  Building cluster graph
+2026-09-24 00:18:48,010 [INFO   ]  Total input reads: 70
+2026-09-24 00:18:48,010 [INFO   ]  Graph constructed
+2026-09-24 00:18:48,010 [INFO   ]  Inferred minimum support: 2
+2026-09-24 00:18:48,040 [CRITICA]  No events found
+2026-09-24 00:18:48,041 [INFO   ]  dysgu run /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam complete, time=0:00:00 h:m:s
+PASS: dysgu run -x --drop-gaps False --mode pacbio-sequel2 -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+Exception ignored in: <_io.FileIO name=3 mode='rb' closefd=True>
+Traceback (most recent call last):
+  File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 595, in test_command
+    process = Popen(shlex.split(c), stdout=PIPE, stderr=PIPE, text=True)
+    ^^^^^^^
+ResourceWarning: unclosed file <_io.TextIOWrapper name=3 encoding='UTF-8'>
+Exception ignored in: <_io.FileIO name=6 mode='rb' closefd=True>
+Traceback (most recent call last):
+  File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 595, in test_command
+    process = Popen(shlex.split(c), stdout=PIPE, stderr=PIPE, text=True)
+    ^^^^^^^
+ResourceWarning: unclosed file <_io.TextIOWrapper name=6 encoding='UTF-8'>
+2026-09-24 00:18:48,975 [INFO   ]  [dysgu-call] Version: 1.9.0
+2026-09-24 00:18:48,975 [INFO   ]  Input file is: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:18:48,975 [INFO   ]  call -x --drop-gaps False -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+2026-09-24 00:18:48,976 [INFO   ]  Sample name: DB143
+2026-09-24 00:18:48,977 [INFO   ]  Writing SVs to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf
+2026-09-24 00:18:48,977 [INFO   ]  Running pipeline
+2026-09-24 00:18:48,981 [INFO   ]  Calculating insert size. Removed 3 outliers with insert size >= 486.0
+2026-09-24 00:18:48,981 [INFO   ]  Inferred read length: 100.0, insert median: 229, insert stdev: 47
+2026-09-24 00:18:48,981 [INFO   ]  Max clustering dist: 464
+2026-09-24 00:18:48,981 [INFO   ]  Building cluster graph
+2026-09-24 00:18:49,322 [INFO   ]  Total input reads: 77
+2026-09-24 00:18:49,322 [INFO   ]  Graph constructed
+2026-09-24 00:18:49,322 [INFO   ]  Minimum support: 3
+2026-09-24 00:18:49,354 [INFO   ]  Number of components: 59. N candidates: 1
+2026-09-24 00:18:49,354 [INFO   ]  Re-alignment of soft-clips done. N candidates: 1
+2026-09-24 00:18:49,354 [INFO   ]  Number of candidate SVs merged: 0
+2026-09-24 00:18:49,354 [INFO   ]  Number of candidate SVs after merge: 1
+2026-09-24 00:18:49,365 [INFO   ]  Loaded n=1 chromosome coverage arrays from /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test
+2026-09-24 00:18:49,382 [INFO   ]  Loading Model: /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/dysgu_model.1.pkl.gz
+2026-09-24 00:18:49,507 [INFO   ]  Model config: pe, diploid: True, contig features: True. N features: 43
+2026-09-24 00:18:49,519 [INFO   ]  dysgu call /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam complete, n=1, time=0:00:00 h:m:s
+PASS: dysgu call -x --drop-gaps False -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/ref.fa /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/wd_test /home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/tests/small.bam
+
+Exception ignored in: <_io.FileIO name=4 mode='rb' closefd=True>
+Traceback (most recent call last):
+  File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 595, in test_command
+    process = Popen(shlex.split(c), stdout=PIPE, stderr=PIPE, text=True)
+    ^^^^^^^
+ResourceWarning: unclosed file <_io.TextIOWrapper name=4 encoding='UTF-8'>
+Exception ignored in: <_io.FileIO name=7 mode='rb' closefd=True>
+Traceback (most recent call last):
+  File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/dysgu/main.py", line 595, in test_command
+    process = Popen(shlex.split(c), stdout=PIPE, stderr=PIPE, text=True)
+    ^^^^^^^
+ResourceWarning: unclosed file <_io.TextIOWrapper name=7 encoding='UTF-8'>
+2026-09-24 00:18:50,508 [INFO   ]  [dysgu-merge] Version: 1.9.0
+2026-09-24 00:18:50,519 [INFO   ]  Merge method auto: all-vs-all
+[W::bcf_hdr_check_sanity] GQ should be declared as Type=Integer
+2026-09-24 00:18:50,525 [INFO   ]  Sample DB143 is present in more than one input file, sample in file /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf will be named DB143_1 in merged vcf
+2026-09-24 00:18:50,561 [INFO   ]  Merge distance: 500 bp
+2026-09-24 00:18:50,566 [INFO   ]  SVs output to /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.merge.dysgu1.9.0.vcf
+2026-09-24 00:18:50,566 [INFO   ]  Samples: ['DB143', 'DB143_1']
+2026-09-24 00:18:50,570 [INFO   ]  Rows after merge 1
+2026-09-24 00:18:50,570 [INFO   ]  dysgu merge complete h:m:s, 0:00:00
+PASS: dysgu merge /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.dysgu1.9.0.vcf /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test2.dysgu1.9.0.vcf -o /home/thomas/Desktop/benchmark-detection-cavendish/results/dysgu-pandas-check/run/test.merge.dysgu1.9.0.vcf
+
+2026-09-24 00:18:50,744 [INFO   ]  Run test complete
+Exception ignored in: <_io.FileIO name=3 mode='rb' closefd=True>
+Traceback (most recent call last):
+  File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/decorators.py", line 34, in new_func
+    return f(get_current_context(), *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ResourceWarning: unclosed file <_io.TextIOWrapper name=3 encoding='UTF-8'>
+Exception ignored in: <_io.FileIO name=6 mode='rb' closefd=True>
+Traceback (most recent call last):
+  File "/home/thomas/Desktop/benchmark-detection-cavendish/.pixi/envs/default/lib/python3.11/site-packages/click/decorators.py", line 34, in new_func
+    return f(get_current_context(), *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ResourceWarning: unclosed file <_io.TextIOWrapper name=6 encoding='UTF-8'>
