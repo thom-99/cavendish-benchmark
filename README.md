@@ -1,11 +1,72 @@
 # Cavendish structural-variant benchmark
 
-## setup
+# Setup
 tools and dependancies are managed with [pixi](https://pixi.prefix.dev/latest/installation/), to install all the dependacies download pixi and run
 ```bash
 pixi install
 ```
 # Results
+
+The following is an evaluation of 3 major variant callers (Sniffles, cuteSV, and dysgu) against 4,000 simulated structural
+variants in the triploid Cavendish genome. The overall counts and metrics are
+available in [metrics.tsv](results/report/metrics.tsv). Precision is the
+fraction of reported calls that match a truth variant (TP / (TP + FP)); recall
+is the fraction of truth variants detected (TP / (TP + FN)). Higher precision
+means fewer false positives, while higher recall means fewer missed variants.
+
+Translocations were excluded when the truth set was simulated, so the 4,000
+truth variants comprise only INS, DEL, DUP, and INV. A simulated translocation
+would be represented by several linked breakend (BND) records rather than one
+VCF record, and callers do not report these junctions in a uniform way.
+Sniffles also emits BND records for some events that are not translocations.
+Counting BND records individually, or matching them solely by variant type,
+could therefore miscount biological events and distort precision and recall.
+A translocation benchmark would need to reconstruct each event from its
+breakends and compare the connected junctions; that event-level analysis is
+outside the scope of this four-type benchmark.
+
+Truvari was run in two ways. The primary analysis requires the call and truth
+variant to have the same type. The `dup-to-ins` analysis also allows a
+duplication (DUP) in one set to match an insertion (INS) in the other. This
+accounts for callers representing the same added sequence differently, and
+measures detection when DUP and INS are both treated as sequence gain.
+
+With variant types required to match, Sniffles has the highest overall
+precision (86.3%) and recall (83.1%). Allowing DUP–INS matches changes the
+results substantially, especially for dysgu: its precision rises from 74.1%
+to 90.3%, and recall from 70.8% to 86.2%. Sniffles reaches 89.6% precision
+and 86.3% recall under this analysis. dysgu has a slightly higher F1 score
+(88.2% versus 87.9% for Sniffles), while Sniffles has marginally higher
+overall recall. cuteSV reaches 81.6% precision and 64.5% recall.
+
+**Primary analysis (INS and DUP must match by type):**
+
+![Precision and recall by caller under primary matching](results/report/plots/metrics-primary.png)
+
+**DUP-to-INS analysis (INS and DUP may match):**
+
+![Precision and recall by caller when DUP and INS may match](results/report/plots/metrics-dup-to-ins.png)
+
+Because the matching convention affects the comparison, recall by allele
+dosage is also evaluated with `dup-to-ins` matching. Allele dosage here means
+the number of haplotypes carrying the variant in this triploid genome: 1/3,
+2/3, or 3/3. This comparison uses the same matching convention across callers
+and does not require genotype agreement.
+
+![Recall by truth allele dosage using DUP-to-INS matching](results/report/plots/recall-by-dosage-dup-to-ins.png)
+
+All callers have their lowest recall for variants at 1/3 dosage. dysgu detects
+72.8% of these variants, compared with 67.4% for Sniffles and 27.4% for
+cuteSV. At 2/3 and 3/3 dosage, Sniffles has the highest recall: 93.9% and
+97.7%, respectively, versus 89.6% and 96.2% for dysgu.
+
+## take-aways
+
+For this simulated dataset, use Sniffles when it is important to distinguish
+duplications from insertions. If both types can be treated as sequence gain,
+dysgu is a strong option: it has slightly higher overall precision and F1,
+and better recall for variants carried by one of the three haplotypes. Sniffles
+has marginally higher overall recall and performs best at the higher dosages.
 
 # Full workflow
 
@@ -175,5 +236,3 @@ and the indexed `tp-base.vcf.gz`, `tp-comp.vcf.gz`, `fn.vcf.gz`, and `fp.vcf.gz`
 The script checks VCF counts against the summary and removes only the unused
 `candidate.refine.bed` after validation. Overall counts, precision, recall, and F1 are collected in
 `results/report/metrics.tsv`.
-
-
