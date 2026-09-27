@@ -68,6 +68,10 @@ dysgu is a strong option: it has slightly higher overall precision and F1,
 and better recall for variants carried by one of the three haplotypes. Sniffles
 has marginally higher overall recall and performs best at the higher dosages.
 
+## limitations
+- The consolidate these findings, it would be a good practice to run multiple simulations with different random seeds, which here was not performed due to limited computational resources.
+- In this workflow, ONT reads were simulated with pbsim3. A more accurate read simulation can be performed with tools such as Badread, which can model also glitches and chimeras, but are significantly slower and computationally heavier.
+
 # Full workflow
 
 ### 1) simulate the triploid 🍌 genome
